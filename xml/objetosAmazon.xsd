@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://server.arso.um.es/" xmlns="http://server.arso.um.es/"
+	elementFormDefault="unqualified">
+
+	<xs:complexType name="peliculaAmazon">
+		<xs:sequence>
+			<xs:element name="descripcionPeliculaAmazon" type="descripcionPeliculaAmazon"
+				minOccurs="0"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="ASIN" type="xs:string" />
+		<xs:attribute name="title" type="xs:string" />
+	</xs:complexType>
+
+	<xs:complexType name="libroAmazon">
+		<xs:sequence>
+			<xs:element name="descripcionLibroAmazon" type="descripcionLibroAmazon"
+				minOccurs="0"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="ASIN" type="xs:string" />
+		<xs:attribute name="title" type="xs:string" />
+	</xs:complexType>
+
+	<xs:complexType name="descripcionPeliculaAmazon">
+		<xs:sequence>
+			<xs:element name="detailPageURL" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="binding" type="xs:string" minOccurs="0" />
+			<xs:element name="EAN" type="xs:string" minOccurs="0" />
+			<xs:element name="releaseDate" type="xs:string" minOccurs="0" />
+			<xs:element name="studio" type="xs:string" minOccurs="0" />
+			<xs:element name="numberOfDiscs" type="xs:nonNegativeInteger"
+				minOccurs="0" />
+			<xs:element name="price" type="Price" minOccurs="0" />
+			<xs:element name="format" type="xs:string" minOccurs="0"
+				maxOccurs="unbounded" />
+			<xs:element name="languages" minOccurs="0" type="languages">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="descripcionLibroAmazon">
+		<xs:sequence>
+			<xs:element name="detailPageURL" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="binding" type="xs:string" minOccurs="0" />
+			<xs:element name="releaseDate" type="xs:string" minOccurs="0" />
+			<xs:element name="EAN" type="xs:string" minOccurs="0" />
+			<xs:element name="author" type="xs:string" minOccurs="0"
+				maxOccurs="unbounded" />
+			<xs:element name="ISBN" type="xs:string" minOccurs="0" />
+			<xs:element name="numberOfPages" type="xs:nonNegativeInteger"
+				minOccurs="0" />
+			<xs:element name="publisher" type="xs:string" minOccurs="0" />
+			<xs:element name="price" type="Price" minOccurs="0" />
+			<xs:element name="format" type="xs:string" minOccurs="0"
+				maxOccurs="unbounded" />
+			<xs:element name="languages" minOccurs="0" type="languages"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Price">
+		<xs:sequence>
+			<xs:element name="amount" type="xs:integer" minOccurs="0" />
+			<xs:element name="currencyCode" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="formattedPrice" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="languages">
+		<xs:sequence>
+			<xs:element name="language" minOccurs="0" maxOccurs="unbounded"
+				type="language">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="language">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="type" type="xs:string" minOccurs="0" />
+			<xs:element name="audioFormat" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

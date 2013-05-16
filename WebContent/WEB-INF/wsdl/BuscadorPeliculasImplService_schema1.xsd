@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://server.arso.um.es/" xmlns:tns="http://server.arso.um.es/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="PeliculaException" type="tns:PeliculaException"/>
+
+  <xs:element name="buscarPorTitulo" type="tns:buscarPorTitulo"/>
+
+  <xs:element name="buscarPorTituloResponse" type="tns:buscarPorTituloResponse"/>
+
+  <xs:element name="obtenerInformacion" type="tns:obtenerInformacion"/>
+
+  <xs:element name="obtenerInformacionResponse" type="tns:obtenerInformacionResponse"/>
+
+  <xs:element name="pelicula">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="descripcionPelicula" type="tns:descripcionPelicula" minOccurs="0"/>
+        <xs:element name="criticasPrensa" type="tns:criticasPrensa" minOccurs="0"/>
+        <xs:element name="criticasUsuario" type="tns:criticasUsuario" minOccurs="0"/>
+        <xs:element name="peliculaAmazon" type="tns:peliculaAmazon" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="libroAmazon" type="tns:libroAmazon" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:integer"/>
+      <xs:attribute name="titulo" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="obtenerInformacion">
+    <xs:sequence>
+      <xs:element name="identificador" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="obtenerInformacionResponse">
+    <xs:sequence>
+      <xs:element ref="tns:pelicula" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="descripcionPelicula">
+    <xs:sequence>
+      <xs:element name="titulo" type="xs:string"/>
+      <xs:element name="director" type="xs:string" maxOccurs="unbounded"/>
+      <xs:element name="reparto" type="xs:string" maxOccurs="unbounded"/>
+      <xs:element name="guion" type="xs:string" maxOccurs="unbounded"/>
+      <xs:element name="musica" type="xs:string" maxOccurs="unbounded"/>
+      <xs:element name="fotografia" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="productora" type="xs:string" maxOccurs="unbounded"/>
+      <xs:element name="genero" type="xs:string" maxOccurs="unbounded"/>
+      <xs:element name="premios" type="xs:string"/>
+      <xs:element name="sinopsis" type="xs:string"/>
+      <xs:element name="imagen" type="xs:anyURI"/>
+      <xs:element name="puntuacion" type="xs:double"/>
+      <xs:element name="votos" type="xs:nonNegativeInteger"/>
+      <xs:element name="tituloOriginal" type="xs:string"/>
+      <xs:element name="ano" type="xs:gYear"/>
+      <xs:element name="pais" type="xs:string"/>
+      <xs:element name="estreno" type="xs:date" minOccurs="0"/>
+      <xs:element name="duracion" type="xs:positiveInteger"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="criticasPrensa">
+    <xs:sequence>
+      <xs:element name="criticaPrensa" type="tns:criticaPrensa" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="criticaPrensa">
+    <xs:sequence>
+      <xs:element name="sinopsis" type="xs:string"/>
+      <xs:element name="media" type="xs:string"/>
+      <xs:element name="critico" type="xs:string"/>
+      <xs:element name="urlCritica" type="xs:anyURI"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="criticasUsuario">
+    <xs:sequence>
+      <xs:element name="criticaUsuario" type="tns:criticaUsuario" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="criticaUsuario">
+    <xs:sequence>
+      <xs:element name="titulo" type="xs:string"/>
+      <xs:element name="usuario" type="xs:string"/>
+      <xs:element name="puntuacion" type="xs:integer"/>
+      <xs:element name="urlCritica" type="xs:anyURI"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="peliculaAmazon">
+    <xs:sequence>
+      <xs:element name="descripcionPeliculaAmazon" type="tns:descripcionPeliculaAmazon" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="ASIN" type="xs:string"/>
+    <xs:attribute name="title" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="descripcionPeliculaAmazon">
+    <xs:sequence>
+      <xs:element name="detailPageURL" type="xs:string" minOccurs="0"/>
+      <xs:element name="binding" type="xs:string" minOccurs="0"/>
+      <xs:element name="EAN" type="xs:string" minOccurs="0"/>
+      <xs:element name="releaseDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="studio" type="xs:string" minOccurs="0"/>
+      <xs:element name="numberOfDiscs" type="xs:nonNegativeInteger" minOccurs="0"/>
+      <xs:element name="price" type="tns:Price" minOccurs="0"/>
+      <xs:element name="format" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="languages" type="tns:languages" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Price">
+    <xs:sequence>
+      <xs:element name="amount" type="xs:integer" minOccurs="0"/>
+      <xs:element name="currencyCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="formattedPrice" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="languages">
+    <xs:sequence>
+      <xs:element name="language" type="tns:language" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="language">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="type" type="xs:string" minOccurs="0"/>
+      <xs:element name="audioFormat" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="libroAmazon">
+    <xs:sequence>
+      <xs:element name="descripcionLibroAmazon" type="tns:descripcionLibroAmazon" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="ASIN" type="xs:string"/>
+    <xs:attribute name="title" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="descripcionLibroAmazon">
+    <xs:sequence>
+      <xs:element name="detailPageURL" type="xs:string" minOccurs="0"/>
+      <xs:element name="binding" type="xs:string" minOccurs="0"/>
+      <xs:element name="releaseDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="EAN" type="xs:string" minOccurs="0"/>
+      <xs:element name="author" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="ISBN" type="xs:string" minOccurs="0"/>
+      <xs:element name="numberOfPages" type="xs:nonNegativeInteger" minOccurs="0"/>
+      <xs:element name="publisher" type="xs:string" minOccurs="0"/>
+      <xs:element name="price" type="tns:Price" minOccurs="0"/>
+      <xs:element name="format" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="languages" type="tns:languages" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PeliculaException">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="buscarPorTitulo">
+    <xs:sequence>
+      <xs:element name="titulo" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="buscarPorTituloResponse">
+    <xs:sequence>
+      <xs:element ref="tns:pelicula" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

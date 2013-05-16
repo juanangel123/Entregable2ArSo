@@ -1,0 +1,123 @@
+.movieImgRating {margin:3px; text-align:center; border:1px solid #00346A;}
+.reborde2 {margin-left:10%; border-left:1px solid #00346A; border-right:1px solid #00346A; width:80%; background-color:#ddd;}
+.reborde1 {margin-left:20%; border-left:1px solid #00346A; border-right:1px solid #00346A; padding:3px 0px 3px 0px; width:60%; background-color:#fff;}
+.movie-rating {color:#f00; font-size:140%; font-weight:bold;}
+.movieTitle {font-size:125%; margin:3px;}
+.movie-info {margin:3px 3px 10px 3px; color:#00346A;}
+.movie-info li {margin:4px 0px 4px 0px;}
+.movie-info span {color:#444; font-weight:bold;}
+.movie-info a {text-decoration: underline;}
+.movie-info .synopsis  {text-align:justify;}
+.movie-info .premium {font-weight: normal;}
+.movie-info .copyright {color:#000;}
+
+.movie-image-panel {padding: 5px 5px 0px 5px; border-bottom:1px solid #00346A;}
+.movie-image-panel .movie-poster {margin:5px; text-align:center; float:left;}
+.movie-image-panel .movie-poster .movie-trailer {margin: 0px 5px 0px 5px; background-color:#ddd; padding:3px; border:1px solid #00346A; text-align:center; font-size:110%;}
+.movie-image-panel .movie-poster .movie-trailer .img-trailer {vertical-align:bottom;}
+
+.movie-rating-vote {text-align:center; margin-left: 115px;}
+.movie-rating-vote .content {width: 172px; margin: 0px auto;}
+.movie-rating-vote .movie-rating-general {}
+.movie-rating-vote .movie-rating-general .movie-rating {color: #00346A; font-size: 30px; font-weight:bold;}
+.movie-rating-vote .movie-rating-general .count {font-size: 90%;}
+.movie-rating-vote .user-vote {margin-top:2px; text-align: left; width: 171px;}
+.movie-rating-vote .user-vote .tu-voto {font-size: 90%; color: #555;}
+.movie-rating-vote .user-vote .my-rating {width: 79px; background-color: /*#E4EBF0*/#FFF; text-align: center; padding: 2px 0px; border: 1px solid #CCC;}
+.movie-rating-vote .user-vote .numeric-user-rate {color:#f00; font-weight: bold; font-size: 25px;}
+.movie-rating-vote .user-vote .text-rating {color:#555; font-size: 90%;}
+.movie-rating-vote .user-vote .rate-button {width: 81px; float: right; text-align: center;}
+.movie-rating-vote .vote-button {padding: 14px; font-weight: normal; font-size: 120%;}
+
+.movie-rating-vote .combo {padding:3px;}
+.movie-rating-vote .theatres {position: absolute; bottom: 5px; background-color:#ddd; padding:3px; border:1px solid #00346A; text-align:center; font-size:110%;}
+
+
+.under-poster {padding-top: 5px;}
+.under-poster .movie-trailer {margin: 2px; padding:3px; text-align:center; font-size:110%; float:left; width: 45%; position: relative;}
+.under-poster .movie-trailer .icon {position: absolute; left: 4px;}
+.under-poster .theatres {float: right; width: 45%; margin: 2px; padding:3px; text-align:center; font-size:110%; position: relative;}
+.under-poster .theatres .icon {position: absolute; left: 4px;}
+
+.movie-trailer-panel {}
+.movie-trailer-panel li.movie-trailer {border-bottom:1px solid #ddd; padding:2px; font-size:110%; font-weight:bold; position: relative;}
+.movie-trailer-panel li.movie-trailer .arrow {position: absolute; right: 2px; top: 50%; margin-top: -13px;}
+.movie-trailer-panel li.movie-trailer .title {padding-top:7px;}
+.movie-trailer-panel li.movie-trailer .youtube-icon {float:left; margin-right:3px;}
+
+
+.ratingValues {margin: 3px 10px;}
+.ratingValues li {padding:3px; font-size:110%; font-weight:bold; margin-bottom:3px; border: 1px solid #00346A;;}
+.ratingValues li .numericValue {width:30px; text-align:center; float:left;  font-size:170%; margin:3px 5px 3px 3px;}
+.ratingValues li.row-rating-selected {}
+
+
+.user-review-card {border-bottom: 1px solid #aaa; position: relative;}
+.userReviewRating {border-left:1px solid #00346A; float:right; text-align:center; background-color: #fff;}
+.userReviewTitle {clear:both; background-color:#bbb; border-bottom:1px solid #00346A; padding:2px;}
+.user-review-info li {padding:2px;}
+.user-review-info li .user {color:#666; font-weight:bold;}
+.user-review-info li.title {font-weight:bold; color:#00346A;}
+.user-review-info .arrow {position: absolute; right: 2px; top: 50%; margin-top: -13px;}
+
+
+.pro-reviews li {border-bottom: 1px solid #C5DCEC;}
+.pro-reviews li .content {padding: 10px 5px 10px 5px;}
+.pro-reviews li .synopsis {text-align: justify;}
+.pro-reviews li .critic {color: #666; font-weight: bold; text-align: right;}
+.pro-reviews li .critic .media {font-weight: normal;}
+.pro-reviews li .critic .media .goto {float: left;}
+.pro-reviews li .critic .media .goto img {vertical-align: middle;}
+.pro-reviews li .critic .media .goto em {font-style: italic; font-size: 80%;}
+.pro-reviews .copyright {color: #888; font-style: normal; border-bottom: 1px solid #555; padding-bottom: 10px; font-size: 90%;}
+
+
+.rev-date {float: right;}
+.review {margin:3px 3px 15px 3px;}
+.reviewTitle {font-weight:bold; font-size:125%;}
+.reviewUser {color:#666; font-size:125%; font-weight:bold; text-decoration: underline;}
+.reviewRating {color:#f00; font-size:125%; font-weight:bold;}
+.reviewInfo {text-align:justify; margin-top:10px;}
+
+
+.friends-rating li {padding:5px 3px 5px 3px; border-bottom:1px solid #aaa;}
+.friends-rating li.row-color {background-color:#ddd;}
+.friends-rating li .nick {color:#444; font-weight:bold;}
+.friends-rating li .nick a {text-decoration: underline;}
+.friends-rating li .stars {float:right; margin-right:5px;}
+.friends-rating li.average-row {font-weight:bold;}
+.friends-rating li .average {color:#E17009;}
+
+.soulmates-rating li {padding:5px 3px 5px 3px; border-bottom:1px solid #aaa;}
+.soulmates-rating li.row-color {background-color:#ddd;}
+.soulmates-rating li .nick {color:#444; font-weight:bold;}
+.soulmates-rating li .nick a {text-decoration: underline;}
+.soulmates-rating li .stars {float:right; margin-right:5px;}
+.soulmates-rating li.average-row {font-weight:bold;}
+.soulmates-rating li .average {color: #E17009;}
+
+
+.showtimes .movie {border-bottom: 1px solid #ccc; padding: 5px 3px 10px 3px;}
+.showtimes .movie .image {float: left;}
+.showtimes .movie .info {margin-left: 55px;}
+.showtimes .movie .info .title {font-weight: bold;}
+.showtimes .movie .info .duration {}
+.showtimes .movie .info .rating {color: #555;}
+.showtimes .movie .week {}
+.showtimes .movie .week .day {font-weight: bold; float: left; text-align: center; width: 13%; border: 1px solid black; margin-right: -1px;}
+.showtimes .movie .week .empty-day {color: #888;}
+.showtimes .movie .week .day .short-date {font-weight: normal; font-size: 90%;}
+.showtimes .movie .week .selected-day {background-color: #ddd; border-bottom: 1px solid #ddd;}
+.showtimes .movie .hours {background-color:#ddd; border: 1px solid black; margin-top: -1px; padding: 3px;}
+.showtimes .movie .hours .hour {border-right: 1px solid #333; padding: 0px 6px 0px 3px;}
+
+
+.theaters-group {margin-bottom: 0px;}
+.theaters-group .combo {margin: 5px;}
+.theaters-group .combo .name {color: #444;}
+.theaters-group .error {position: relative; padding: 5px 0px 5px 0px; margin: 3px;}
+.theaters-group .error .error-text {margin-left: 30px;}
+.theaters-group .error .icon {position: absolute; top: 13px; left: 5px;}
+.theaters-group .header {padding: 10px 0px; position: relative;}
+.theaters-group .header .icon {position: absolute; right: 5px;}
+.theaters-group .goTo {display: inline; padding: 2px 5px;}

@@ -1,0 +1,50 @@
+CREDENCIALES DE ACCESO AWS:
+Número de clave: AKIAJHGHHY4CQNGY4SEA
+Clave de acceso: +sNkd+7AqhUuRnCmJqxkC+P668YwESy/sjb2kAby
+
+SITUACIÓN DE LOS ELEMENTOS:
+/peliculas -> Se generan los xml de la práctica anterior
+/wsdl -> El wsdl de Amazon
+/xml -> El xml de Amazon, esquemas realizados
+/WebContent/pelicula.html -> Html generado por el transformador (almacena la última película mostrada)
+(css en carpeta /WebContent/css)
+/WebContent/xsl/pelicula.xsl -> hoja de estilos necesaria para el transformador
+
+PROCESO DE GENERACION COMPLETO:
+
+El proceso está realizado con JAX-WS unicamente (http://jax-ws.java.net/2.2.7/)
+Generación del servicio mediante JAX-WS del JDK y publicado con las liberías anteriores
+
+IMPORTANTE: Las librerías de JAX-WS deben estar en el directorio lib de tomcat
+Deben estar configuradas las variables de entorno CATALINA_HOME y TOMCAT_HOME
+Así como JAVA_HOME
+
+ADEMÁS, hace falta tener webservices-api.jar (de Metro) en lib/endorsed de java (jre dentro de jdk) y tomcat
+por problema con un método de la clase WebFault 
+
+1. Si no están las clases de amazon (en carpeta Entregable2)
+
+"C:\Program Files\Java\jdk1.6.0_45\bin\wsimport" -d ./build/classes -s ./src  -p com.ecs.client.jax http://webservices.amazon.com/AWSECommerceService/AWSECommerceService.wsdl -b ./xml/jaxws-custom.xml
+
+2. Si no están las clases JAXB (en carpeta Entregable2/src)
+
+C:\"Program Files"\Java\jdk1.6.0_45\bin\xjc ..\xml\criticasPrensa.xsd ..\xml\criticasUsuario.xsd ..\xml\descripcionPelicula.xsd ..\xml\objetosAmazon.xsd ..\xml\pelicula.xsd -p es.um.arso.pelicula
+
+3. WSGEN (en carpeta Entregable2)
+Nota: debe estar la carpeta wsdl creada, sirve para relacionar el wsdl creado con el war que se va a exportar
+
+"C:\Program Files\Java\jdk1.6.0_45\bin\wsgen" -verbose -keep -cp ./build/classes -d ./build/classes -wsdl -r ./WebContent/WEB-INF/wsdl -s ./src es.um.arso.server.BuscadorPeliculasImpl
+
+4. Export WAR file (exportar a tomcat -> webapps)
+
+5. CLIENTE:
+El cliente se va a realizar en el mismo proyecto simplemente por comodidad (en carpeta Entregable2)
+
+Se necesita la clase del servicio y el porttype
+
+"C:\Program Files\Java\jdk1.6.0_45\bin\wsimport" -d ./build/classes -s ./src  -p es.um.arso.cliente.tipos http://localhost:8080/Entregable2/BuscadorPeliculas?wsdl
+
+NOTA: El servicio debe estar desplegado para poder generar las clases del cliente (se coge el wsdl de localhost)
+
+La ejecución del cliente puede tardar mucho y devolver muchos resultados
+El cliente del entregable anterior es igualmente funcional (es.um.arso.buscador.Main)

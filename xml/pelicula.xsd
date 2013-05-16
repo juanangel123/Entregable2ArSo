@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://server.arso.um.es/" xmlns="http://server.arso.um.es/"
+	elementFormDefault="unqualified">
+
+	<!-- Asi puedo tener los esquemas en uno solo y al hacer la transformacion 
+		formatearlo todo en una sola pagina -->
+	<xs:include schemaLocation="descripcionPelicula.xsd"></xs:include>
+	<xs:include schemaLocation="criticasPrensa.xsd"></xs:include>
+	<xs:include schemaLocation="criticasUsuario.xsd"></xs:include>
+	<xs:include schemaLocation="objetosAmazon.xsd"></xs:include>
+
+	<xs:element name="pelicula">
+		<xs:complexType>
+		<xs:sequence>
+			<xs:element name="descripcionPelicula" type="descripcionPelicula"
+				minOccurs="0"></xs:element>
+			<xs:element name="criticasPrensa" type="criticasPrensa"
+				minOccurs="0"></xs:element>
+			<xs:element name="criticasUsuario" type="criticasUsuario"
+				minOccurs="0"></xs:element>
+			<xs:element name="peliculaAmazon" type="peliculaAmazon"
+				minOccurs="0" maxOccurs="unbounded"></xs:element>
+			<xs:element name="libroAmazon" type="libroAmazon"
+				minOccurs="0" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:integer"></xs:attribute>
+		<xs:attribute name="titulo" type="xs:string"></xs:attribute>
+	</xs:complexType>
+	</xs:element>
+
+</xs:schema>

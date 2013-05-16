@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://server.arso.um.es/" xmlns="http://server.arso.um.es/"
+	elementFormDefault="unqualified">
+
+	<xs:complexType name="criticasPrensa">
+		<xs:sequence>
+			<xs:element name="criticaPrensa" minOccurs="0" maxOccurs="unbounded"
+				type="criticaPrensa"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="criticaPrensa">
+		<xs:sequence>
+			<xs:element name="sinopsis" type="xs:string"></xs:element>
+			<xs:element name="media" type="xs:string"></xs:element>
+			<xs:element name="critico" type="xs:string"></xs:element>
+			<xs:element name="urlCritica" type="xs:anyURI"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
+		

@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://server.arso.um.es/" xmlns="http://server.arso.um.es/"
+	elementFormDefault="unqualified">
+
+	<xs:complexType name="criticasUsuario">
+		<xs:sequence>
+			<xs:element name="criticaUsuario" minOccurs="0" maxOccurs="unbounded"
+				type="criticaUsuario"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="criticaUsuario">
+		<xs:sequence>
+			<xs:element name="titulo" type="xs:string"></xs:element>
+			<xs:element name="usuario" type="xs:string"></xs:element>
+			<xs:element name="puntuacion" type="xs:integer"></xs:element>
+			<xs:element name="urlCritica" type="xs:anyURI"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

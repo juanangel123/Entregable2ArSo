@@ -1,0 +1,95 @@
+html {background-color:#fff;}
+body {font-size:11pt; color:#003464; padding-left: 10%; padding-right: 10%; }
+a:link, a:hover, a:visited {text-decoration:none; color:#003464}
+select {font-size: 125%; padding: 2px;}
+
+.clearfix {clear: both;}
+.disable-widget-header {background-image: url('../images/dark_wave.png'); background-position: center center; font-weight: bold; border: 1px solid #aaa; color: #aaa;}
+.pager-widget-header {background-image: url('../images/super_dark_wave.png'); background-position: center center; font-weight: bold; border: 1px solid #aaa; color: #aaa;}
+
+.copyright {margin: 10px 3px 10px 3px; font-style: italic;}
+.hidden {display: none;}
+
+
+.warning {border: 1px solid #f98b01; color: #f98b01; background-color: #fffdfa;}
+
+
+.fa-info {padding: 10px; text-align: justify;}
+.no-result {padding: 5px;}
+.no-result strong {font-weight: bold; display: block; margin-bottom: 5px;}
+
+.top-banner {position: relative; border-bottom: 2px solid #5c9ccc; height: 57px;}
+.top-banner .home {position: absolute; top:6px; right: 60px; width: 45px; height: 45px;}
+.top-banner .search {position: absolute; top:6px; right: 10px; width: 45px; height: 45px;}
+
+
+/* Top */
+.top-content {border-top: 2px solid #888;}
+.img-logo {float:left; margin: 5px 0px 0px 2px;}
+.float-separator {clear:both;}
+.user-loged-bar {padding:2px 6px 0px 2px; color:#003464; border: 1px solid #d19405; font-size: 90%; text-align: right;}
+.user-loged-bar .nick {margin-top: 2px:}
+.user-loged-bar img {vertical-align: bottom; padding-bottom: 1px; margin-right: 3px;}
+
+#main-menu {margin: 6px;}
+#main-menu li {margin: 4px 0px 4px 0px;  position: relative;}
+#main-menu li .button {padding: 2px 10px;}
+#main-menu li .button .icon {position: absolute; right: 5px; top: 10px;}
+#main-menu li .button .login-sub {font-size: 65%; color: #003464; }
+#main-menu li.login-button {padding: 6px 0px;}
+#main-menu li.login-button .login {color: #FFD202;}
+
+.titulo {padding: 2px; font-size: 30px;}
+.titulo .original-title {color: #E17009; font-size: 85%;}
+.titulo .subtitulo {color: #E17009; font-size: 60%;}
+
+/* Button Panels */
+.page-bottom-panel {margin: 5px 0px 0px 0px;}
+.page-bottom-panel .buttons-panel {background-color: #E4EBF0;}
+.buttons-panel {position:relative; margin: 3px 3px 0px 3px; text-align:center; }
+.buttons-panel .buttons {width:48%;}
+.buttons-panel .big-button {padding: 5px 0px;}
+.buttons-panel .padding {width:40%; padding:8px 0px 8px 0px;}
+.buttons-panel .right {float: right; margin: 5px 0px;}
+.buttons-panel .left {float: left; margin: 5px 0px;}
+.buttons-panel .center {margin: 5px auto;}
+.buttons-panel .button-content {padding: 5px 0px;}
+
+.buttons-panel2 {background-color: #014479}
+.buttons-panel2 .button {margin: 5px 0px;}
+.buttons-panel2 .button img {vertical-align: middle;}
+.buttons-panel2 .right {float: right; margin-right: 5px;}
+.buttons-panel2 .left {float: left; margin-left: 5px;}
+
+/* Bottom */
+.page-bottom {font-size:90%; text-align:center; /*width:100%;*/ border: 1px solid #d19405;}
+.web-links {padding: 3px 0px 3px 0px; text-align: center; border-top: 1px solid #444;}
+.web-links span {font-weight: normal;}
+
+/* Pager */
+.pager {position:relative; font-size:125%; margin:5px 3px 20px 3px; text-align:center;}
+.pagerAnterior {float: left; width:20%; padding:7px 0px 3px 0px;}
+.pagerSiguiente {float: right; width:20%; padding:7px 0px 3px 0px;}
+
+
+.search-form {margin: 10px 0px; text-align: center;}
+.search-form ul li {margin: 10px 0px 10px 0px;}
+.search-form ul li.input {}
+.search-form ul li input {font-size: 135%;}
+.search-form ul li .submit {padding: 5px; font-size: 110%; font-weight: normal; margin-left: 5px;}
+
+.form-login {text-align: center; margin: 20px 0px;}
+.form-login li {margin: 5px 0px 5px 0px;}
+.form-login li input {font-size: 135%;}
+.form-login li.input {margin-bottom: 10px;}
+.form-login li.rememberme {margin-bottom: 10px;}
+.form-login li.rememberme .hidden-check {display: none;}
+.form-login li.rememberme img {vertical-align: middle;}
+.form-login li .button {padding: 5px; font-size: 110%; font-weight: normal;}
+.rememberme-info {padding: 5px 10px 5px 10px; text-align: justify;}
+
+#userw {padding: 25px 5px;}
+#userw strong {font-weight: bold;}
+
+
+#serverbusy {padding: 5px;}
